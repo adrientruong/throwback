@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "SetupViewController.h"
+
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface AppDelegate ()
 
@@ -19,12 +23,24 @@
 {
     UIWindow *window = [[UIWindow alloc] init];
     
-    UIViewController *viewController = [[UIViewController alloc] init];
+    SetupViewController *viewController = [[SetupViewController alloc] init];
     window.rootViewController = viewController;
     
     [window makeKeyAndVisible];
     
+    self.window = window;
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
