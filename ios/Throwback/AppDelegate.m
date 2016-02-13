@@ -12,6 +12,11 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
+#import <Spotify/Spotify.h>
+
+#define kSpotifyClientID @"9d342728b0664f75aeafc7a42aa31a84"
+#define kSpotifyRedirectURL @"throwback-login://"
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +26,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[SPTAuth defaultInstance] setClientID:kSpotifyClientID];
+    [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:kSpotifyRedirectURL]];
+    [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistReadPrivateScope]];
+
     UIWindow *window = [[UIWindow alloc] init];
     
     SetupViewController *viewController = [[SetupViewController alloc] init];
@@ -37,10 +46,24 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                          openURL:url
-                                                sourceApplication:sourceApplication
-                                                       annotation:annotation];
+    
+    // Ask SPTAuth if the URL given is a Spotify authentication callback
+    if ([[SPTAuth defaultInstance] canHandleURL:url]) {
+        [[SPTAuth defaultInstance] handleAuthCallbackWithTriggeredAuthURL:url callback:^(NSError *error, SPTSession *session) {
+            if (error) {
+                NSLog(@"*** Auth error: %@", error);
+                return;
+            }
+            
+            NSLog(@"Token: %@", session.accessToken);
+        }];
+        return YES;
+    } else {
+        return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                              openURL:url
+                                                    sourceApplication:sourceApplication
+                                                           annotation:annotation];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

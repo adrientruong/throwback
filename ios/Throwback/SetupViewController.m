@@ -10,6 +10,8 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
+#import <Spotify/Spotify.h>
+
 @interface SetupViewController () <FBSDKLoginButtonDelegate>
 
 
@@ -36,9 +38,10 @@
     NSLog(@"token: %@", [FBSDKAccessToken currentAccessToken].tokenString);
 }
 
-- (IBAction)spotifyButtonWasTapped
+- (IBAction)spotifyLoginButtonWasTapped
 {
-    
+    NSURL *loginURL = [[SPTAuth defaultInstance] loginURL];
+    [[UIApplication sharedApplication] openURL:loginURL];
 }
 
 @end

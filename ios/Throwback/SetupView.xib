@@ -19,7 +19,7 @@
                     <rect key="frame" x="144" y="162" width="49" height="30"/>
                     <state key="normal" title="Spotify"/>
                     <connections>
-                        <action selector="spotifyButtonWasTapped" destination="-1" eventType="touchUpInside" id="cXK-pD-f22"/>
+                        <action selector="spotifyLoginButtonWasTapped" destination="-1" eventType="touchUpInside" id="U0o-Il-8vY"/>
                     </connections>
                 </button>
             </subviews>
