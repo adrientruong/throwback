@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetupViewController">
             <connections>
+                <outlet property="facebookLoginButton" destination="zey-gc-VWd" id="Bme-p0-mRc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rac-G9-VlZ"/>
             </connections>
         </placeholder>
@@ -15,16 +16,57 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-Ri-T9h">
-                    <rect key="frame" x="144" y="162" width="49" height="30"/>
-                    <state key="normal" title="Spotify"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-Ri-T9h">
+                    <rect key="frame" x="42" y="326" width="237" height="44"/>
+                    <color key="backgroundColor" red="0.19607843137254902" green="0.80784313725490198" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="237" id="7Qu-DB-Ewd"/>
+                        <constraint firstAttribute="height" constant="44" id="JkL-YE-T5t"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Connect with Spotify">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="spotifyLoginButtonWasTapped" destination="-1" eventType="touchUpInside" id="U0o-Il-8vY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zey-gc-VWd" customClass="FBSDKLoginButton">
+                    <rect key="frame" x="42" y="239" width="237" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TOU-ar-6oU"/>
+                        <constraint firstAttribute="width" constant="237" id="c9g-Cw-SJ9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-uh-AJR">
+                    <rect key="frame" x="41" y="75" width="238.5" height="58"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="53"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.72165639960758365" green="0.38167645297373942" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="r3z-Ri-T9h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="81x-bA-Dgs"/>
+                <constraint firstItem="zey-gc-VWd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CKf-EM-UQq"/>
+                <constraint firstItem="zey-gc-VWd" firstAttribute="top" secondItem="a6x-uh-AJR" secondAttribute="bottom" constant="106" id="HZn-YA-m7N"/>
+                <constraint firstItem="a6x-uh-AJR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="75" id="cHa-Mg-eMD"/>
+                <constraint firstItem="r3z-Ri-T9h" firstAttribute="top" secondItem="zey-gc-VWd" secondAttribute="bottom" constant="8" id="cRA-vO-fPn"/>
+                <constraint firstItem="r3z-Ri-T9h" firstAttribute="top" secondItem="zey-gc-VWd" secondAttribute="bottom" constant="43" id="os6-5c-XRm"/>
+                <constraint firstItem="a6x-uh-AJR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zsf-NA-0n5"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="cRA-vO-fPn"/>
+                </mask>
+            </variation>
         </view>
     </objects>
 </document>

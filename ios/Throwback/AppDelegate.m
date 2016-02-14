@@ -19,6 +19,8 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) SPTAudioStreamingController *player;
+
 @end
 
 @implementation AppDelegate
@@ -28,7 +30,7 @@
 {
     [[SPTAuth defaultInstance] setClientID:kSpotifyClientID];
     [[SPTAuth defaultInstance] setRedirectURL:[NSURL URLWithString:kSpotifyRedirectURL]];
-    [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistReadPrivateScope]];
+    [[SPTAuth defaultInstance] setRequestedScopes:@[SPTAuthStreamingScope, SPTAuthUserLibraryReadScope, SPTAuthPlaylistReadPrivateScope]];
 
     UIWindow *window = [[UIWindow alloc] init];
     
@@ -56,6 +58,8 @@
             }
             
             NSLog(@"Token: %@", session.accessToken);
+            
+            self.spotifyLoginCompletionHandler();
         }];
         return YES;
     } else {

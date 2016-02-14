@@ -15,6 +15,12 @@
 		7A81093D1C6F6C300074ECD3 /* SetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A81093C1C6F6C300074ECD3 /* SetupView.xib */; };
 		7A81093F1C6F75380074ECD3 /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A81093E1C6F75380074ECD3 /* Spotify.framework */; };
 		7A8109411C6F75640074ECD3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8109401C6F75640074ECD3 /* AVFoundation.framework */; };
+		7A8109441C6F7B6F0074ECD3 /* BluemixClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109431C6F7B6F0074ECD3 /* BluemixClient.m */; };
+		7A8109471C6F7CEC0074ECD3 /* TimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109461C6F7CEC0074ECD3 /* TimePeriod.m */; };
+		7A81094A1C6F7EA80074ECD3 /* Throwback.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109491C6F7EA80074ECD3 /* Throwback.m */; };
+		7A81094D1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81094C1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m */; };
+		7A8109501C6F80D20074ECD3 /* FacebookPhotoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */; };
+		7A8109521C6FC0380074ECD3 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109511C6FC0380074ECD3 /* sample.json */; };
 		BF86D605C56D651CB9CD2416 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4E3ED319A991A43072E9D6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +39,17 @@
 		7A81093C1C6F6C300074ECD3 /* SetupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupView.xib; sourceTree = "<group>"; };
 		7A81093E1C6F75380074ECD3 /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
 		7A8109401C6F75640074ECD3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7A8109421C6F7B6F0074ECD3 /* BluemixClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluemixClient.h; sourceTree = "<group>"; };
+		7A8109431C6F7B6F0074ECD3 /* BluemixClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluemixClient.m; sourceTree = "<group>"; };
+		7A8109451C6F7CEC0074ECD3 /* TimePeriod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePeriod.h; sourceTree = "<group>"; };
+		7A8109461C6F7CEC0074ECD3 /* TimePeriod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePeriod.m; sourceTree = "<group>"; };
+		7A8109481C6F7EA80074ECD3 /* Throwback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Throwback.h; sourceTree = "<group>"; };
+		7A8109491C6F7EA80074ECD3 /* Throwback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Throwback.m; sourceTree = "<group>"; };
+		7A81094B1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowbackPlayerViewController.h; sourceTree = "<group>"; };
+		7A81094C1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowbackPlayerViewController.m; sourceTree = "<group>"; };
+		7A81094E1C6F80D20074ECD3 /* FacebookPhotoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhotoDownloader.h; sourceTree = "<group>"; };
+		7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhotoDownloader.m; sourceTree = "<group>"; };
+		7A8109511C6FC0380074ECD3 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		D820211D89A04117F204C128 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +109,17 @@
 			children = (
 				7A36D1871C6F685B005B3846 /* AppDelegate.h */,
 				7A36D1881C6F685B005B3846 /* AppDelegate.m */,
+				7A8109421C6F7B6F0074ECD3 /* BluemixClient.h */,
+				7A8109431C6F7B6F0074ECD3 /* BluemixClient.m */,
+				7A8109511C6FC0380074ECD3 /* sample.json */,
+				7A81094B1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.h */,
+				7A81094C1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m */,
+				7A81094E1C6F80D20074ECD3 /* FacebookPhotoDownloader.h */,
+				7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */,
+				7A8109481C6F7EA80074ECD3 /* Throwback.h */,
+				7A8109491C6F7EA80074ECD3 /* Throwback.m */,
+				7A8109451C6F7CEC0074ECD3 /* TimePeriod.h */,
+				7A8109461C6F7CEC0074ECD3 /* TimePeriod.m */,
 				7A8109391C6F6C140074ECD3 /* SetupViewController.h */,
 				7A81093A1C6F6C140074ECD3 /* SetupViewController.m */,
 				7A81093C1C6F6C300074ECD3 /* SetupView.xib */,
@@ -145,6 +173,7 @@
 				TargetAttributes = {
 					7A36D1801C6F685B005B3846 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 46ZNXAG38D;
 					};
 				};
 			};
@@ -172,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A81093D1C6F6C300074ECD3 /* SetupView.xib in Resources */,
+				7A8109521C6FC0380074ECD3 /* sample.json in Resources */,
 				7A36D1941C6F685B005B3846 /* LaunchScreen.storyboard in Resources */,
 				7A36D1911C6F685B005B3846 /* Assets.xcassets in Resources */,
 			);
@@ -235,6 +265,11 @@
 				7A36D1891C6F685B005B3846 /* AppDelegate.m in Sources */,
 				7A81093B1C6F6C140074ECD3 /* SetupViewController.m in Sources */,
 				7A36D1861C6F685B005B3846 /* main.m in Sources */,
+				7A81094A1C6F7EA80074ECD3 /* Throwback.m in Sources */,
+				7A81094D1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m in Sources */,
+				7A8109441C6F7B6F0074ECD3 /* BluemixClient.m in Sources */,
+				7A8109471C6F7CEC0074ECD3 /* TimePeriod.m in Sources */,
+				7A8109501C6F80D20074ECD3 /* FacebookPhotoDownloader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +372,8 @@
 			baseConfigurationReference = 07E4A291BCEBB0F5F3345876 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,6 +383,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrientruong.Throwback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -354,6 +393,8 @@
 			baseConfigurationReference = D820211D89A04117F204C128 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -363,6 +404,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adrientruong.Throwback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

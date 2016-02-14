@@ -1,2 +1,4 @@
 pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
+pod 'AFNetworking', '~> 2.0'
+pod 'SDWebImage'
