@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FacebookLoginViewController">
+            <connections>
+                <outlet property="facebookLoginButton" destination="tki-98-YGp" id="mBb-5R-hgz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1av-bl-E36">
+                    <rect key="frame" x="40" y="57" width="240" height="172"/>
+                    <string key="text">First, you need to log in to Facebook.
+
+We use Facebook to show you past photos and relevant comments that are sure to make you feel all giddy inside.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tki-98-YGp" customClass="FBSDKLoginButton">
+                    <rect key="frame" x="40" y="273" width="240" height="44"/>
+                    <color key="backgroundColor" red="0.085740688179999996" green="0.0016079409359999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="237" id="Hyh-xg-ams"/>
+                        <constraint firstAttribute="height" constant="44" id="mHP-U5-jN2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Log In to Facebook">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Hyh-xg-ams"/>
+                        </mask>
+                    </variation>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.72165639960000005" green="0.38167645300000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="tki-98-YGp" firstAttribute="top" secondItem="1av-bl-E36" secondAttribute="bottom" constant="44" id="3gY-1z-qP8"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="leading" secondItem="1av-bl-E36" secondAttribute="leading" id="5SP-3a-FrP"/>
+                <constraint firstItem="1av-bl-E36" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="Bpc-F7-ufz"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="249" id="Chv-g3-cY5"/>
+                <constraint firstItem="1av-bl-E36" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="GPq-jz-VB2"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="249" id="HNu-N9-RGf"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="leading" secondItem="1av-bl-E36" secondAttribute="leading" id="HhN-WD-afd"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="width" secondItem="1av-bl-E36" secondAttribute="width" id="fCv-eE-mGw"/>
+                <constraint firstAttribute="trailing" secondItem="1av-bl-E36" secondAttribute="trailing" constant="14" id="iYt-x6-hKb"/>
+                <constraint firstItem="1av-bl-E36" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="bottom" multiplier="0.1" id="kMO-WQ-Wge"/>
+                <constraint firstItem="tki-98-YGp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kij-yO-jnR"/>
+                <constraint firstItem="1av-bl-E36" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tCg-Ja-pBX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Bpc-F7-ufz"/>
+                    <exclude reference="iYt-x6-hKb"/>
+                    <exclude reference="5SP-3a-FrP"/>
+                    <exclude reference="Chv-g3-cY5"/>
+                    <exclude reference="HNu-N9-RGf"/>
+                    <exclude reference="HhN-WD-afd"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

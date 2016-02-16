@@ -11,20 +11,24 @@
 #import "FacebookPhotoDownloader.h"
 #import "Throwback.h"
 #import "TimePeriod.h"
+#import "Photo.h"
+#import "ShareViewController.h"
 
-#define kAdriensToken @"BQBeP7TbkBuJyFzKyefSVzf1uJgt3NPQGfEM7-yq7ddaIwZ2GFBExik1J_KtsNKy3-7oM1rJie4ai7Bzu0mNRdYyez2QE0Pm-xkmfFsMKBhYjV7NOsLIrMSy9cdwvz5a3CEOUXjtMw_koxFrWuSpXAwxzfyxA_H1IXfGXxj_1SAh8DUL6qtAkkbO7IIrh9z3WLNswKQ1b22ehNeiyJMP6Go"
+#define kAdriensToken @"BQBjTzuBvyI8Ia_P-7E_-h_g2-Tb0RotJqT9Ay-UB77GNBERHLzqJjFeBhSPUsI26jEG2V837kxD05q3XIZAjt0dHNNO7YtxtX0nL_rnEjFUUHgFqEzDQe2ygoFd3lZwTyJRRbPB1b4ZoIpL0p_JO6khCwqQr69mwT-92crm15uOd3T3BZyYEf6va2Ctk1KDgxKSNH8iKARIiec5Q-FhijM"
 
 @interface ThrowbackPlayerViewController ()
 
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 @property (nonatomic, assign) UIImageView *imageView;
-
-@property (nonatomic, strong) NSDictionary *images;
+@property (nonatomic, assign) UILabel *dateLabel;
+@property (nonatomic, assign) UILabel *commentLabel;
 
 @property (nonatomic, assign) NSInteger currentTimePeriodIndex;
-@property (nonatomic, assign) NSInteger currentImageIndex;
+@property (nonatomic, assign) NSInteger currentPhotoIndex;
 
 @property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
@@ -35,19 +39,54 @@
     [super viewDidLoad];
     
     UIImageView *imageView = [[UIImageView alloc] init];
-    [self.view addSubview:imageView];
-    
-    imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSDictionary *views = NSDictionaryOfVariableBindings(imageView);
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]|" options:0 metrics:nil views:views]];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
-    
+    [self.view addSubview:imageView];
     self.imageView = imageView;
     
+    UIVisualEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    UILabel *dateLabel = [[UILabel alloc] init];
+    dateLabel.textColor = [UIColor whiteColor];
+    [effectView.contentView addSubview:dateLabel];
+    [self.view addSubview:effectView];
+    self.dateLabel = dateLabel;
+    
+    UILabel *commentLabel = [[UILabel alloc] init];
+    commentLabel.textColor = [UIColor whiteColor];
+    commentLabel.numberOfLines = 0;
+    [self.view addSubview:commentLabel];
+    self.commentLabel = commentLabel;
+    
+    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    dateLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    commentLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    effectView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSDictionary *views = NSDictionaryOfVariableBindings(imageView, dateLabel, commentLabel, effectView);
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[imageView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[effectView]" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[commentLabel]-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[commentLabel]-20-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[dateLabel]-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[dateLabel]-|" options:0 metrics:nil views:views]];
+
+    [self.dateLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    [self.commentLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+
     self.view.backgroundColor = [UIColor blackColor];
     
     [self prepareAssets];
+}
+
+- (NSDateFormatter *)dateFormatter
+{
+    if (!_dateFormatter) {
+        _dateFormatter = [[NSDateFormatter alloc] init];
+        [_dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    }
+    
+    return _dateFormatter;
 }
 
 - (TimePeriod *)currentTimePeriod
@@ -55,17 +94,18 @@
     return self.throwback.timePeriods[self.currentTimePeriodIndex];
 }
 
-- (UIImage *)currentImage
+- (Photo *)currentPhoto
 {
-    return self.images[[self currentTimePeriod].facebookPhotoIDs[self.currentImageIndex]];
+    TimePeriod *period = [self currentTimePeriod];
+    return period.photos[self.currentPhotoIndex];
 }
 
 - (void)start
 {
     self.currentTimePeriodIndex = 0;
-    self.currentImageIndex = 0;
+    self.currentPhotoIndex = 0;
     
-    self.imageView.image = [self currentImage];
+    self.imageView.image = [self currentPhoto].image;
     
     NSMutableArray *URIStrings = [NSMutableArray array];
     for (TimePeriod *period in self.throwback.timePeriods) {
@@ -122,9 +162,9 @@
 
 - (void)update
 {
-    self.currentImageIndex++;
-    if (self.currentImageIndex >= [self.currentTimePeriod.facebookPhotoIDs count]) {
-        self.currentImageIndex = 0;
+    self.currentPhotoIndex++;
+    if (self.currentPhotoIndex >= [self.currentTimePeriod.photos count]) {
+        self.currentPhotoIndex = 0;
         self.currentTimePeriodIndex++;
         if (self.currentTimePeriodIndex >= [self.throwback.timePeriods count]) {
             [self stop];
@@ -134,12 +174,22 @@
         //[self increaseVolume];
     }
     
+    Photo *photo = [self currentPhoto];
     [UIView transitionWithView:self.view
                       duration:0.33f
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
-                        self.imageView.image = [self currentImage];
+                        self.imageView.image = [self currentPhoto].image;
     } completion:NULL];
+    
+    self.dateLabel.text = [self.dateFormatter stringFromDate:photo.date];
+    [self.dateLabel invalidateIntrinsicContentSize];
+    self.commentLabel.text = photo.comment;
+    [self.commentLabel invalidateIntrinsicContentSize];
+    
+    NSLog(@"%@", photo.comment);
+    
+    [self.view setNeedsLayout];
 }
 
 - (void)stop
@@ -147,7 +197,9 @@
     [self.timer invalidate];
     [self.player stop:^(NSError *error) {
         [self.player logout:^(NSError *error) {
-            [self dismissViewControllerAnimated:YES completion:nil];
+            ShareViewController *shareViewController = [[ShareViewController alloc] init];
+            shareViewController.throwback = self.throwback;
+            [self.navigationController pushViewController:shareViewController animated:YES];
         }];
     }];
 }
@@ -159,7 +211,12 @@
     FacebookPhotoDownloader *downloader = [FacebookPhotoDownloader sharedDownloader];
     dispatch_group_enter(group);
     [downloader downloadPhotosWithIDs:[self.throwback photoIDs] withCompletionHandler:^(NSDictionary *images, NSError *error) {
-        self.images = images;
+        for (TimePeriod *period in self.throwback.timePeriods) {
+            for (Photo *photo in period.photos) {
+                photo.image = images[photo.facebookID];
+            }
+        }
+        
         dispatch_group_leave(group);
     }];
     

@@ -11,6 +11,6 @@
 @interface TimePeriod : NSObject
 
 @property (nonatomic, strong) NSArray *spotifySongIDs;
-@property (nonatomic, strong) NSArray *facebookPhotoIDs;
+@property (nonatomic, strong) NSArray *photos;
 
 @end

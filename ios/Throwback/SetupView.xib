@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetupViewController">
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3z-Ri-T9h">
-                    <rect key="frame" x="42" y="326" width="237" height="44"/>
+                    <rect key="frame" x="42" y="325" width="237" height="44"/>
                     <color key="backgroundColor" red="0.19607843137254902" green="0.80784313725490198" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="237" id="7Qu-DB-Ewd"/>
@@ -37,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zey-gc-VWd" customClass="FBSDKLoginButton">
-                    <rect key="frame" x="42" y="239" width="237" height="44"/>
+                    <rect key="frame" x="42" y="238" width="237" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="TOU-ar-6oU"/>
                         <constraint firstAttribute="width" constant="237" id="c9g-Cw-SJ9"/>
@@ -45,7 +46,7 @@
                     <state key="normal" title="Button"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Throwback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-uh-AJR">
-                    <rect key="frame" x="41" y="75" width="238.5" height="58"/>
+                    <rect key="frame" x="41" y="74" width="238.5" height="58"/>
                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="53"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -56,7 +57,7 @@
                 <constraint firstItem="r3z-Ri-T9h" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="81x-bA-Dgs"/>
                 <constraint firstItem="zey-gc-VWd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CKf-EM-UQq"/>
                 <constraint firstItem="zey-gc-VWd" firstAttribute="top" secondItem="a6x-uh-AJR" secondAttribute="bottom" constant="106" id="HZn-YA-m7N"/>
-                <constraint firstItem="a6x-uh-AJR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="75" id="cHa-Mg-eMD"/>
+                <constraint firstItem="a6x-uh-AJR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="0.132" id="cHa-Mg-eMD"/>
                 <constraint firstItem="r3z-Ri-T9h" firstAttribute="top" secondItem="zey-gc-VWd" secondAttribute="bottom" constant="8" id="cRA-vO-fPn"/>
                 <constraint firstItem="r3z-Ri-T9h" firstAttribute="top" secondItem="zey-gc-VWd" secondAttribute="bottom" constant="43" id="os6-5c-XRm"/>
                 <constraint firstItem="a6x-uh-AJR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zsf-NA-0n5"/>

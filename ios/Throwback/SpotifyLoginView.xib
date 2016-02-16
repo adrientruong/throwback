@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpotifyLoginViewController">
+            <connections>
+                <outlet property="view" destination="VlN-fl-yxU" id="Iem-i5-0P0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VlN-fl-yxU">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxK-Ti-Snc">
+                    <rect key="frame" x="40" y="57" width="240" height="150.5"/>
+                    <string key="text">Now, you need to log in to Spotify.
+
+We use Spotify to find out what you were listening to back in 2012. Don't worry, this is a judgement free hack.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lou-su-9iz">
+                    <rect key="frame" x="40" y="254" width="240" height="44"/>
+                    <color key="backgroundColor" red="0.1960784314" green="0.80784313730000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Xgn-lT-qBy"/>
+                        <constraint firstAttribute="width" constant="237" id="ypi-qG-Jtr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Connect with Spotify">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="22"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ypi-qG-Jtr"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="spotifyLoginButtonWasTapped" destination="-1" eventType="touchUpInside" id="L1k-yP-9rD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.72165639960000005" green="0.38167645300000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FxK-Ti-Snc" firstAttribute="centerX" secondItem="VlN-fl-yxU" secondAttribute="centerX" id="Bqu-vK-FGF"/>
+                <constraint firstAttribute="trailing" secondItem="FxK-Ti-Snc" secondAttribute="trailing" constant="14" id="G5R-MI-bIB"/>
+                <constraint firstItem="lou-su-9iz" firstAttribute="top" secondItem="FxK-Ti-Snc" secondAttribute="bottom" constant="46.5" id="S03-Uj-IEb"/>
+                <constraint firstItem="lou-su-9iz" firstAttribute="width" secondItem="FxK-Ti-Snc" secondAttribute="width" id="ZEJ-6N-sqp"/>
+                <constraint firstItem="lou-su-9iz" firstAttribute="centerX" secondItem="VlN-fl-yxU" secondAttribute="centerX" id="c01-Zs-7Ff"/>
+                <constraint firstItem="FxK-Ti-Snc" firstAttribute="top" secondItem="VlN-fl-yxU" secondAttribute="bottom" multiplier="0.1" id="tXY-eb-jgc"/>
+                <constraint firstItem="FxK-Ti-Snc" firstAttribute="width" secondItem="VlN-fl-yxU" secondAttribute="width" multiplier="0.75" id="upL-pM-nmK"/>
+                <constraint firstItem="FxK-Ti-Snc" firstAttribute="leading" secondItem="VlN-fl-yxU" secondAttribute="leading" constant="14" id="xZE-UE-4BG"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="G5R-MI-bIB"/>
+                    <exclude reference="xZE-UE-4BG"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

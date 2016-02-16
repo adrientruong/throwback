@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SetupViewController.h"
+#import "WelcomeViewController.h"
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -34,8 +34,10 @@
 
     UIWindow *window = [[UIWindow alloc] init];
     
-    SetupViewController *viewController = [[SetupViewController alloc] init];
-    window.rootViewController = viewController;
+    WelcomeViewController *viewController = [[WelcomeViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navController.navigationBarHidden = YES;
+    window.rootViewController = navController;
     
     [window makeKeyAndVisible];
     
@@ -57,7 +59,7 @@
                 return;
             }
             
-            NSLog(@"Token: %@", session.accessToken);
+            NSLog(@"Spotify Token: %@", session.accessToken);
             
             self.spotifyLoginCompletionHandler();
         }];

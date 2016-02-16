@@ -9,6 +9,7 @@
 #import "BluemixClient.h"
 #import "TimePeriod.h"
 #import "Throwback.h"
+#import "Photo.h"
 
 #define kURLString @"https://throwback.mybluemix.net"
 #define kURL [NSURL URLWithString:kURLString]
@@ -42,11 +43,25 @@
         response = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
          */
         
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+        
         NSArray *timePeriodDictionaries = response[@"time_periods"];
         NSMutableArray *timePeriods = [NSMutableArray array];
         for (NSDictionary *timePeriodDictionary in timePeriodDictionaries) {
             TimePeriod *period = [[TimePeriod alloc] init];
-            period.facebookPhotoIDs = timePeriodDictionary[@"photos"];
+            
+            NSMutableArray *photos = [NSMutableArray array];
+            for (NSDictionary *photoDictionary in timePeriodDictionary[@"photos"]) {
+                Photo *photo = [[Photo alloc] init];
+                photo.facebookID = photoDictionary[@"id"];
+                photo.comment = photoDictionary[@"comment"];
+                photo.date = [dateFormatter dateFromString:photoDictionary[@"date"]];
+                photo.songTitle = photoDictionary[@"song_title"];
+                
+                [photos addObject:photo];
+            }
+            period.photos = photos;
             period.spotifySongIDs = timePeriodDictionary[@"songs"];
             [timePeriods addObject:period];
         }

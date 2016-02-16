@@ -15,7 +15,7 @@
 {
     NSMutableArray *photoIDs = [NSMutableArray array];
     for (TimePeriod *period in self.timePeriods) {
-        [photoIDs addObjectsFromArray:period.facebookPhotoIDs];
+        [photoIDs addObjectsFromArray:[period.photos valueForKey:@"facebookID"]];
     }
     return photoIDs;
 }

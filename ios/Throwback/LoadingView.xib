@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-zE-Nse">
+                    <rect key="frame" x="141" y="258.5" width="37" height="37"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-2c-seF">
+                    <rect key="frame" x="40" y="57" width="240" height="172"/>
+                    <string key="text">Now, you wait. Our really hardworking IBM Bluemix server is processing all your data and sending it to the NS... I mean compiling it into a cool throwback slideshow that will make you miss the good old days.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.72165639960000005" green="0.38167645300000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="mOK-2c-seF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2cm-en-SMp"/>
+                <constraint firstItem="mOK-2c-seF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="bottom" multiplier="0.1" id="WKQ-qL-dye"/>
+                <constraint firstItem="mOK-2c-seF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="e4i-YO-rYI"/>
+                <constraint firstItem="ZCF-zE-Nse" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rHh-bb-B02"/>
+                <constraint firstItem="ZCF-zE-Nse" firstAttribute="top" secondItem="mOK-2c-seF" secondAttribute="bottom" constant="29.5" id="z1T-B9-zrt"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

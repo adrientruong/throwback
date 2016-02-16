@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
+            <connections>
+                <outlet property="scrollView" destination="VK2-8b-joa" id="zd7-sg-kVt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l28-dE-Tzi">
+                    <rect key="frame" x="47" y="43" width="281" height="193.5"/>
+                    <string key="text">That's it! That's what we spent 36 hours hacking on. Hope you enjoyed it. 😊
+
+If you want to share your awesomly nostalgic memories with the Internet, we've preseelected 3 of, what we think, are your best moments.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QS0-2L-Ods">
+                    <rect key="frame" x="47" y="574" width="281" height="60"/>
+                    <color key="backgroundColor" red="0.1960784314" green="0.80784313730000001" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="0bs-tJ-yL0"/>
+                        <constraint firstAttribute="width" constant="237" id="fcm-tx-1iN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                    <state key="normal" title="Finish">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fcm-tx-1iN"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="finish" destination="-1" eventType="touchUpInside" id="2i7-WT-32t"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VK2-8b-joa" customClass="UIScrollView">
+                    <rect key="frame" x="0.0" y="260" width="375" height="280"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="280" id="90X-jD-rwS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.72165639960000005" green="0.38167645300000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VK2-8b-joa" secondAttribute="trailing" id="504-Rq-Olg"/>
+                <constraint firstItem="l28-dE-Tzi" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="I5B-qj-V2B"/>
+                <constraint firstItem="QS0-2L-Ods" firstAttribute="top" secondItem="VK2-8b-joa" secondAttribute="bottom" constant="34" id="Of1-H0-M12"/>
+                <constraint firstItem="l28-dE-Tzi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PKH-E8-oMf"/>
+                <constraint firstItem="VK2-8b-joa" firstAttribute="top" secondItem="l28-dE-Tzi" secondAttribute="bottom" constant="23.5" id="TsB-Wx-PMH"/>
+                <constraint firstItem="QS0-2L-Ods" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WZ6-W9-x8W"/>
+                <constraint firstItem="l28-dE-Tzi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="43" id="hdW-hx-RUz"/>
+                <constraint firstItem="QS0-2L-Ods" firstAttribute="width" secondItem="l28-dE-Tzi" secondAttribute="width" id="hoP-8U-NcV"/>
+                <constraint firstItem="VK2-8b-joa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="prr-fJ-Jny"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

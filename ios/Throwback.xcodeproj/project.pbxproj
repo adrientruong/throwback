@@ -21,6 +21,20 @@
 		7A81094D1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81094C1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m */; };
 		7A8109501C6F80D20074ECD3 /* FacebookPhotoDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */; };
 		7A8109521C6FC0380074ECD3 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109511C6FC0380074ECD3 /* sample.json */; };
+		7A8109551C7075710074ECD3 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109541C7075710074ECD3 /* Photo.m */; };
+		7A8109591C7084940074ECD3 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109571C7084940074ECD3 /* FacebookLoginViewController.m */; };
+		7A81095A1C7084940074ECD3 /* FacebookLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109581C7084940074ECD3 /* FacebookLoginView.xib */; };
+		7A81095D1C7085A50074ECD3 /* SpotifyLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81095C1C7085A50074ECD3 /* SpotifyLoginViewController.m */; };
+		7A8109641C7086040074ECD3 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109621C7086040074ECD3 /* LoadingViewController.m */; };
+		7A8109651C7086040074ECD3 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109631C7086040074ECD3 /* LoadingView.xib */; };
+		7A8109691C7087100074ECD3 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109671C7087100074ECD3 /* WelcomeViewController.m */; };
+		7A81096A1C7087100074ECD3 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109681C7087100074ECD3 /* WelcomeView.xib */; };
+		7A81096C1C708C160074ECD3 /* SpotifyLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A81096B1C708C160074ECD3 /* SpotifyLoginView.xib */; };
+		7A8109721C709BDB0074ECD3 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109701C709BDB0074ECD3 /* ShareViewController.m */; };
+		7A8109731C709BDB0074ECD3 /* ShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109711C709BDB0074ECD3 /* ShareView.xib */; };
+		7A8109751C709FAC0074ECD3 /* ShareCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A8109741C709FAC0074ECD3 /* ShareCardView.xib */; };
+		7A8109781C70A6800074ECD3 /* ShareCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8109771C70A6800074ECD3 /* ShareCard.m */; };
+		7A81097B1C70A6BF0074ECD3 /* ShareCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A81097A1C70A6BF0074ECD3 /* ShareCardView.m */; };
 		BF86D605C56D651CB9CD2416 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4E3ED319A991A43072E9D6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +64,28 @@
 		7A81094E1C6F80D20074ECD3 /* FacebookPhotoDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhotoDownloader.h; sourceTree = "<group>"; };
 		7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhotoDownloader.m; sourceTree = "<group>"; };
 		7A8109511C6FC0380074ECD3 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		7A8109531C7075710074ECD3 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		7A8109541C7075710074ECD3 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		7A8109561C7084940074ECD3 /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
+		7A8109571C7084940074ECD3 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
+		7A8109581C7084940074ECD3 /* FacebookLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginView.xib; sourceTree = "<group>"; };
+		7A81095B1C7085A50074ECD3 /* SpotifyLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyLoginViewController.h; sourceTree = "<group>"; };
+		7A81095C1C7085A50074ECD3 /* SpotifyLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyLoginViewController.m; sourceTree = "<group>"; };
+		7A8109611C7086040074ECD3 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		7A8109621C7086040074ECD3 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		7A8109631C7086040074ECD3 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		7A8109661C7087100074ECD3 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		7A8109671C7087100074ECD3 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		7A8109681C7087100074ECD3 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		7A81096B1C708C160074ECD3 /* SpotifyLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpotifyLoginView.xib; sourceTree = "<group>"; };
+		7A81096F1C709BDB0074ECD3 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		7A8109701C709BDB0074ECD3 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		7A8109711C709BDB0074ECD3 /* ShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareView.xib; sourceTree = "<group>"; };
+		7A8109741C709FAC0074ECD3 /* ShareCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCardView.xib; sourceTree = "<group>"; };
+		7A8109761C70A6800074ECD3 /* ShareCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCard.h; sourceTree = "<group>"; };
+		7A8109771C70A6800074ECD3 /* ShareCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCard.m; sourceTree = "<group>"; };
+		7A8109791C70A6BF0074ECD3 /* ShareCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCardView.h; sourceTree = "<group>"; };
+		7A81097A1C70A6BF0074ECD3 /* ShareCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCardView.m; sourceTree = "<group>"; };
 		D820211D89A04117F204C128 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,12 +150,34 @@
 				7A8109511C6FC0380074ECD3 /* sample.json */,
 				7A81094B1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.h */,
 				7A81094C1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m */,
+				7A81095B1C7085A50074ECD3 /* SpotifyLoginViewController.h */,
+				7A81095C1C7085A50074ECD3 /* SpotifyLoginViewController.m */,
+				7A81096B1C708C160074ECD3 /* SpotifyLoginView.xib */,
+				7A8109611C7086040074ECD3 /* LoadingViewController.h */,
+				7A8109621C7086040074ECD3 /* LoadingViewController.m */,
+				7A8109631C7086040074ECD3 /* LoadingView.xib */,
+				7A8109561C7084940074ECD3 /* FacebookLoginViewController.h */,
+				7A8109571C7084940074ECD3 /* FacebookLoginViewController.m */,
+				7A8109581C7084940074ECD3 /* FacebookLoginView.xib */,
 				7A81094E1C6F80D20074ECD3 /* FacebookPhotoDownloader.h */,
 				7A81094F1C6F80D20074ECD3 /* FacebookPhotoDownloader.m */,
 				7A8109481C6F7EA80074ECD3 /* Throwback.h */,
 				7A8109491C6F7EA80074ECD3 /* Throwback.m */,
+				7A8109531C7075710074ECD3 /* Photo.h */,
+				7A8109541C7075710074ECD3 /* Photo.m */,
 				7A8109451C6F7CEC0074ECD3 /* TimePeriod.h */,
 				7A8109461C6F7CEC0074ECD3 /* TimePeriod.m */,
+				7A81096F1C709BDB0074ECD3 /* ShareViewController.h */,
+				7A8109701C709BDB0074ECD3 /* ShareViewController.m */,
+				7A8109711C709BDB0074ECD3 /* ShareView.xib */,
+				7A8109761C70A6800074ECD3 /* ShareCard.h */,
+				7A8109771C70A6800074ECD3 /* ShareCard.m */,
+				7A8109791C70A6BF0074ECD3 /* ShareCardView.h */,
+				7A81097A1C70A6BF0074ECD3 /* ShareCardView.m */,
+				7A8109741C709FAC0074ECD3 /* ShareCardView.xib */,
+				7A8109661C7087100074ECD3 /* WelcomeViewController.h */,
+				7A8109671C7087100074ECD3 /* WelcomeViewController.m */,
+				7A8109681C7087100074ECD3 /* WelcomeView.xib */,
 				7A8109391C6F6C140074ECD3 /* SetupViewController.h */,
 				7A81093A1C6F6C140074ECD3 /* SetupViewController.m */,
 				7A81093C1C6F6C300074ECD3 /* SetupView.xib */,
@@ -201,9 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A81093D1C6F6C300074ECD3 /* SetupView.xib in Resources */,
+				7A81096A1C7087100074ECD3 /* WelcomeView.xib in Resources */,
 				7A8109521C6FC0380074ECD3 /* sample.json in Resources */,
 				7A36D1941C6F685B005B3846 /* LaunchScreen.storyboard in Resources */,
+				7A8109651C7086040074ECD3 /* LoadingView.xib in Resources */,
+				7A81095A1C7084940074ECD3 /* FacebookLoginView.xib in Resources */,
+				7A8109751C709FAC0074ECD3 /* ShareCardView.xib in Resources */,
 				7A36D1911C6F685B005B3846 /* Assets.xcassets in Resources */,
+				7A8109731C709BDB0074ECD3 /* ShareView.xib in Resources */,
+				7A81096C1C708C160074ECD3 /* SpotifyLoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +326,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8109691C7087100074ECD3 /* WelcomeViewController.m in Sources */,
 				7A36D1891C6F685B005B3846 /* AppDelegate.m in Sources */,
+				7A81097B1C70A6BF0074ECD3 /* ShareCardView.m in Sources */,
 				7A81093B1C6F6C140074ECD3 /* SetupViewController.m in Sources */,
 				7A36D1861C6F685B005B3846 /* main.m in Sources */,
+				7A8109721C709BDB0074ECD3 /* ShareViewController.m in Sources */,
+				7A8109551C7075710074ECD3 /* Photo.m in Sources */,
 				7A81094A1C6F7EA80074ECD3 /* Throwback.m in Sources */,
 				7A81094D1C6F7F2B0074ECD3 /* ThrowbackPlayerViewController.m in Sources */,
+				7A8109591C7084940074ECD3 /* FacebookLoginViewController.m in Sources */,
+				7A8109641C7086040074ECD3 /* LoadingViewController.m in Sources */,
+				7A8109781C70A6800074ECD3 /* ShareCard.m in Sources */,
 				7A8109441C6F7B6F0074ECD3 /* BluemixClient.m in Sources */,
+				7A81095D1C7085A50074ECD3 /* SpotifyLoginViewController.m in Sources */,
 				7A8109471C6F7CEC0074ECD3 /* TimePeriod.m in Sources */,
 				7A8109501C6F80D20074ECD3 /* FacebookPhotoDownloader.m in Sources */,
 			);
